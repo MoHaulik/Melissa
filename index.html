@@ -1,0 +1,216 @@
+import React from 'react';
+import { Linkedin, BookOpen, Mail, GraduationCap, Briefcase, ExternalLink, MessageSquare, Calendar } from 'lucide-react';
+
+export default function App() {
+  return (
+    <div className="min-h-screen bg-[#fafaf9] text-slate-800 font-sans selection:bg-teal-900 selection:text-white">
+      
+      {/* Floating Action Buttons (Like in the reference image) */}
+      <div className="fixed right-6 top-1/2 -translate-y-1/2 flex flex-col gap-4 z-50 hidden md:flex">
+        <a href="#kontakt" className="bg-white p-4 rounded-xl shadow-[0_4px_20px_rgba(0,0,0,0.05)] hover:shadow-[0_4px_20px_rgba(0,0,0,0.1)] transition-shadow flex flex-col items-center gap-2 group cursor-pointer border border-slate-100">
+          <MessageSquare className="w-5 h-5 text-slate-700 group-hover:text-teal-800 transition-colors" />
+          <span className="text-[10px] font-semibold uppercase tracking-wider text-slate-600">Foredrag</span>
+        </a>
+        <a href="https://www.linkedin.com/in/melissahallenslavlarsen/" target="_blank" rel="noopener noreferrer" className="bg-white p-4 rounded-xl shadow-[0_4px_20px_rgba(0,0,0,0.05)] hover:shadow-[0_4px_20px_rgba(0,0,0,0.1)] transition-shadow flex flex-col items-center gap-2 group cursor-pointer border border-slate-100">
+          <Linkedin className="w-5 h-5 text-slate-700 group-hover:text-teal-800 transition-colors" />
+          <span className="text-[10px] font-semibold uppercase tracking-wider text-slate-600">Connect</span>
+        </a>
+      </div>
+
+      {/* Navigation */}
+      <nav className="w-full px-8 py-6 flex justify-between items-center max-w-7xl mx-auto">
+        <div className="text-xl font-serif text-teal-900 tracking-wide font-medium">MHL.</div>
+        <div className="flex gap-6 text-sm font-medium text-slate-500 uppercase tracking-widest">
+          <a href="#biografi" className="hover:text-teal-800 transition-colors">Biografi</a>
+          <a href="#erfaring" className="hover:text-teal-800 transition-colors">Erfaring</a>
+          <a href="#publikationer" className="hover:text-teal-800 transition-colors">Publikationer</a>
+        </div>
+      </nav>
+
+      {/* Main Hero & Bio Section */}
+      <main className="max-w-6xl mx-auto px-6 pt-12 pb-24" id="biografi">
+        <div className="grid grid-cols-1 md:grid-cols-12 gap-12 lg:gap-20">
+          
+          {/* Left Column: Image & Quote */}
+          <div className="md:col-span-5 flex flex-col">
+            <div className="relative aspect-[3/4] w-full overflow-hidden rounded-sm bg-slate-200">
+              {/* Placeholder image - Replace with Melissa's actual high-res black & white photo */}
+              <img 
+                src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                alt="Melissa Hallenslav Larsen - Dansk AI Ekspert" 
+                className="w-full h-full object-cover grayscale contrast-125 brightness-95"
+              />
+            </div>
+            <div className="mt-8 text-center px-4">
+              <blockquote className="font-serif text-xl md:text-2xl italic text-slate-700 leading-relaxed">
+                "Det handler ikke om at erstatte den kreative proces, men om at åbne den op."
+              </blockquote>
+            </div>
+          </div>
+
+          {/* Right Column: Text Content */}
+          <div className="md:col-span-7 flex flex-col justify-center">
+            {/* SEO Optimized H1 */}
+            <h1 className="text-4xl md:text-5xl font-serif text-teal-900 mb-2">
+              Melissa Hallenslav Larsen
+            </h1>
+            <h2 className="text-sm md:text-base font-semibold text-slate-500 uppercase tracking-[0.2em] mb-8 border-b-2 border-teal-200 inline-block pb-2 w-max">
+              Dansk AI Ekspert & Content Specialist
+            </h2>
+
+            <div className="space-y-6 text-slate-600 leading-relaxed font-light text-lg">
+              <p>
+                <strong className="font-medium text-slate-800">Melissa Hallenslav Larsen</strong> er en af Danmarks førende stemmer i krydsfeltet mellem generativ AI, sprogpsykologi og forretningsudvikling. Som AI Content Specialist ved <span className="text-teal-900 font-medium">Flying Tiger Copenhagen</span> står hun i spidsen for implementeringen af AI-drevne workflows, der transformerer globale marketingkampagner.
+              </p>
+              
+              <p>
+                Med en <span className="font-medium text-slate-800">Cand.mag. i Sprogpsykologi</span> fra Københavns Universitet og specialisering i Human-centered AI fra Università degli Studi di Milano, bringer Melissa en unik, akademisk funderet tilgang til kunstig intelligens. Hun forstår ikke blot teknologien bag, men de dybere psykologiske og antropologiske mekanismer, der er på spil, når mennesker og algoritmer interagerer.
+              </p>
+
+              <p>
+                Hendes arbejde demonstrerer i praksis, hvordan AI ikke er en erstatning for kreativitet, men en katalysator. Gennem udviklingen af nye AI-baserede arbejdsgange har hun skabt resultater, der i dag hænger i Flying Tiger-butikker verden over – og som har reduceret processer fra dage til timer, hvilket giver plads til mere innovation.
+              </p>
+
+              <p>
+                Melissa er desuden publiceret forfatter til den akademiske artikel <em>"Når ChatGPT tager ordet"</em>, hvori hun analyserer afsenderrollen i AI-genereret kommunikation. En afgørende læsning for forståelsen af fremtidens digitale interaktion.
+              </p>
+            </div>
+
+            <div className="mt-10 flex flex-wrap gap-4">
+              <a href="https://www.linkedin.com/in/melissahallenslavlarsen/" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 bg-teal-900 text-white px-6 py-3 rounded-full hover:bg-teal-800 transition-colors text-sm font-medium tracking-wide">
+                <Linkedin className="w-4 h-4" />
+                Forbind på LinkedIn
+              </a>
+              <a href="https://tidsskrift.dk/lwo/article/view/151817" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 border border-teal-900 text-teal-900 px-6 py-3 rounded-full hover:bg-teal-50 transition-colors text-sm font-medium tracking-wide">
+                <BookOpen className="w-4 h-4" />
+                Læs Publikation
+              </a>
+            </div>
+          </div>
+        </div>
+      </main>
+
+      {/* Latest Insight / Case Study Section */}
+      <section className="bg-teal-900 text-teal-50 py-20" id="erfaring">
+        <div className="max-w-4xl mx-auto px-6">
+          <h3 className="text-3xl font-serif mb-12 text-center text-white">Praktisk AI Implementering i Skala</h3>
+          
+          <div className="bg-teal-800/50 p-8 md:p-12 rounded-2xl border border-teal-700">
+            <div className="flex items-center gap-4 mb-6">
+              <Briefcase className="w-6 h-6 text-teal-300" />
+              <h4 className="text-xl font-medium text-white">Fra idé til global kampagne</h4>
+            </div>
+            
+            <p className="text-teal-100/90 leading-relaxed mb-6 italic">
+              "If you had told me a year ago that an AI image I made would be seen by several million people and hang in Flying Tiger Copenhagen stores around the world, I wouldn’t have believed you. But here we are 🤩"
+            </p>
+            
+            <p className="text-teal-50/80 leading-relaxed mb-6">
+              I sit arbejde hos Flying Tiger Copenhagen HQ har Melissa implementeret et nyt #AI-drevet workflow til produktplakater. Et massivt skift i tilgangen til kreativ produktion. Hvor det tidligere krævede enorm tid på praktisk sourcing, props, fotografering og redigering, har AI-integrationen ændret teamets dynamik.
+            </p>
+
+            <p className="text-teal-50/80 leading-relaxed">
+              <strong className="text-teal-200">Resultatet:</strong> Hvad der før tog dage, udforskes nu på timer. Det giver eksponentielt mere tid til at teste idéer, skubbe til kreative retninger og forfine det, der reelt virker. Det frigør det menneskelige potentiale fra rutineopgaver.
+            </p>
+
+            <div className="mt-8 pt-6 border-t border-teal-700/50 flex justify-between items-center">
+              <span className="text-sm text-teal-300/80 uppercase tracking-widest font-semibold">Flying Tiger Copenhagen HQ</span>
+              <a href="https://www.linkedin.com/in/melissahallenslavlarsen/" target="_blank" rel="noopener noreferrer" className="text-sm font-medium text-white flex items-center gap-2 hover:text-teal-200 transition-colors">
+                Læs indlægget <ExternalLink className="w-4 h-4" />
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Academic Background & Publications */}
+      <section className="py-24 max-w-6xl mx-auto px-6" id="publikationer">
+        <h3 className="text-3xl font-serif text-teal-900 mb-16 text-center">Fagligt Fundament</h3>
+        
+        <div className="grid md:grid-cols-2 gap-12">
+          
+          {/* Education */}
+          <div className="space-y-8">
+            <div className="flex items-center gap-3 mb-8 border-b border-slate-200 pb-4">
+              <GraduationCap className="w-6 h-6 text-teal-800" />
+              <h4 className="text-xl font-medium text-slate-800 uppercase tracking-wide">Uddannelse</h4>
+            </div>
+
+            <div className="relative pl-6 border-l border-teal-100 space-y-10">
+              <div className="relative">
+                <div className="absolute -left-[31px] top-1 w-4 h-4 rounded-full bg-teal-800 ring-4 ring-white" />
+                <h5 className="font-semibold text-slate-800 text-lg">Cand.mag. i Sprogpsykologi</h5>
+                <p className="text-teal-800 text-sm font-medium mb-2">Københavns Universitet</p>
+                <p className="text-slate-600 text-sm">Fokus på generativ AI. Speciale: <em>"Fra Prompt til Prosa"</em> (Karakter: 12).</p>
+              </div>
+
+              <div className="relative">
+                <div className="absolute -left-[31px] top-1 w-4 h-4 rounded-full bg-slate-300 ring-4 ring-white" />
+                <h5 className="font-semibold text-slate-800 text-lg">Human-centered AI (Udveksling)</h5>
+                <p className="text-teal-800 text-sm font-medium mb-2">Università degli Studi di Milano (Sep 2024 – Jan 2025)</p>
+                <p className="text-slate-600 text-sm">Kurser i bl.a. Artificial intelligence, AI & anthropology, AI & media theory samt Rules, reasons & Norms.</p>
+              </div>
+
+              <div className="relative">
+                <div className="absolute -left-[31px] top-1 w-4 h-4 rounded-full bg-slate-300 ring-4 ring-white" />
+                <h5 className="font-semibold text-slate-800 text-lg">BSc in Informatics and Psychology</h5>
+                <p className="text-teal-800 text-sm font-medium mb-2">Roskilde Universitet</p>
+                <p className="text-slate-600 text-sm">Tvær-videnskabelig bachelor i spændingsfeltet mellem datalogi, systemudvikling og menneskets psykologi.</p>
+              </div>
+            </div>
+          </div>
+
+          {/* Publications */}
+          <div>
+            <div className="flex items-center gap-3 mb-8 border-b border-slate-200 pb-4">
+              <BookOpen className="w-6 h-6 text-teal-800" />
+              <h4 className="text-xl font-medium text-slate-800 uppercase tracking-wide">Akademiske Udgivelser</h4>
+            </div>
+
+            <a href="https://tidsskrift.dk/lwo/article/view/151817" target="_blank" rel="noopener noreferrer" className="block group">
+              <div className="bg-white p-8 rounded-2xl border border-slate-100 shadow-[0_4px_20px_rgba(0,0,0,0.03)] group-hover:shadow-[0_8px_30px_rgba(0,0,0,0.08)] group-hover:border-teal-100 transition-all">
+                <div className="text-xs font-bold uppercase tracking-widest text-teal-700 mb-4 flex items-center gap-2">
+                  <span>Sprog i Udvikling</span>
+                  <span className="w-1 h-1 rounded-full bg-slate-300"></span>
+                  <span>Peer-reviewed</span>
+                </div>
+                <h5 className="text-2xl font-serif text-slate-800 mb-4 group-hover:text-teal-800 transition-colors leading-tight">
+                  "Når ChatGPT tager ordet"
+                </h5>
+                <p className="text-slate-600 text-sm leading-relaxed mb-6 font-medium">
+                  En analyse af afsenderrollen i e-mailkommunikation.
+                </p>
+                <p className="text-slate-500 text-sm leading-relaxed mb-8 font-light">
+                  I denne artikel undersøger Melissa, hvordan fremkomsten af store sprogmodeller som ChatGPT påvirker og udfordrer vores opfattelse af afsenderen i digital, tekstbaseret kommunikation. Hvordan dechifrerer vi intention og ansvar, når teksten er maskinskrevet, men menneskestyret?
+                </p>
+                
+                <div className="flex items-center gap-2 text-teal-800 font-medium text-sm group-hover:gap-3 transition-all">
+                  Læs hele artiklen på tidsskrift.dk <ExternalLink className="w-4 h-4" />
+                </div>
+              </div>
+            </a>
+          </div>
+
+        </div>
+      </section>
+
+      {/* Footer / CTA */}
+      <footer className="bg-slate-900 text-slate-400 py-12 text-center" id="kontakt">
+        <div className="max-w-2xl mx-auto px-6">
+          <h2 className="text-2xl font-serif text-white mb-6">Booking & Samarbejde</h2>
+          <p className="mb-8 font-light">
+            Søger du en ekspert, der kan bygge bro mellem AI-hype og praktisk, menneskecentreret implementering? Melissa er tilgængelig for udvalgte foredrag, paneler og netværk.
+          </p>
+          <a href="https://www.linkedin.com/in/melissahallenslavlarsen/" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 bg-white text-slate-900 px-8 py-3 rounded-full hover:bg-teal-50 transition-colors font-medium">
+            <Mail className="w-4 h-4" />
+            Kontakt via LinkedIn
+          </a>
+          <div className="mt-16 text-sm opacity-50">
+            © {new Date().getFullYear()} Melissa Hallenslav Larsen. Alle rettigheder forbeholdes.
+          </div>
+        </div>
+      </footer>
+
+    </div>
+  );
+}
